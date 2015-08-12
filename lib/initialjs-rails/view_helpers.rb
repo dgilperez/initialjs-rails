@@ -22,7 +22,7 @@ module InitialjsRails
       end
       data_attributes.merge!(name: avatarable.name)
 
-      content_tag :img, nil, class: "avatar #{klass}", data: data_attributes
+      content_tag :img, nil, class: "initialjs-avatar #{klass}", data: data_attributes
     end
   end
 end
