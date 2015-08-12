@@ -1,0 +1,3 @@
+module InitialjsRails
+  VERSION = "0.1.0"
+end
