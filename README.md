@@ -26,7 +26,7 @@ After that add the following directive to your Javascript manifest file (applica
 
 Add this to your application.js after page is ready:
 
-    $('.initialjs-avatar').profile();
+    $('.initialjs-avatar').initial();
 
 And finally, in your views, tag your *<img/>* class with `initialjs-avatar` class. You can use *data-attributes* as described in [initial.js](https://github.com/mozilla/metrics-graphics).
 
@@ -37,7 +37,7 @@ Enjoy.
 For extra simplicity, you can use this helper in your view to generate your avatar image from your model. In the following examples we'll use User, but any model responding to `:name` will do. You can learn the options available and their defaults directly from the examples:
 
   avatar_image(user)                       # => 100x100 image with round corners
-  avatar_image(user, style: :small)        # => 32x32 image with round corners
+  avatar_image(user, size: 32)             # => 32x32 image with round corners
   avatar_image(user, class: 'extra_class') # => add an extra CSS class to <img/> tag
   avatar_image(user, round_corners: false) # => disable round corners
 
