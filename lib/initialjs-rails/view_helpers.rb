@@ -6,8 +6,10 @@ module InitialjsRails
       size          = options.fetch(:size)          { 100 }
       klass         = options.fetch(:class)         { '' }
       round_corners = options.fetch(:round_corners) { true }
+      seed          = options.fetch(:seed)          { 0 }
 
       data_attributes = { name: avatarable.name,
+        seed: seed,
         height: size,
         width: size,
         "font-size" => (size * 0.6) }
