@@ -16,7 +16,7 @@ module InitialjsRails
 
       data_attributes.merge!(radius: (size * 0.13).round) if round_corners
 
-      content_tag :img, nil, class: "initialjs-avatar #{klass}".strip, data: data_attributes
+      content_tag :img, nil, alt: avatarable.name, class: "initialjs-avatar #{klass}".strip, data: data_attributes
     end
   end
 end
