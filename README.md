@@ -49,7 +49,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Versioning
 
-initialjs-rails 0.1.0 == initial.js 0.1.0
+initialjs-rails 0.2.0 == initial.js 0.2.0
+
+Regarding intermediate versions between initialjs releases, an extra number will be used. For example, `0.2.0.1` version reflects some change within initialjs-rails, still using initialjs' `0.2.0` version.
 
 ## Contributing
 
