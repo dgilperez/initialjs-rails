@@ -1,6 +1,6 @@
 # initialjs-rails
 
-[initial.js](https://github.com/mozilla/metrics-graphics) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
+[initial.js](https://github.com/judesfernando/initial.js) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
 
 **initialjs-rails** is a wrapper to easily include it in your Rails projects using the assets pipeline.
 
@@ -28,7 +28,7 @@ Add this to your application.js after page is ready:
 
     $('.initialjs-avatar').initial();
 
-And finally, in your views, tag your *<img/>* class with `initialjs-avatar` class. You can use *data-attributes* as described in [initial.js](https://github.com/mozilla/metrics-graphics). Or you can use the helper below.
+And finally, in your views, tag your *<img/>* class with `initialjs-avatar` class. You can use *data-attributes* as described in [initial.js](https://github.com/judesfernando/initial.js). Or you can use the helper below.
 
 Enjoy.
 
