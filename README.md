@@ -1,6 +1,6 @@
 # initialjs-rails
 
-[initial.js](https://github.com/judesfernando/initial.js) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
+[initial.js](https://github.com/mozilla/metrics-graphics) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
 
 **initialjs-rails** is a wrapper to easily include it in your Rails projects using the assets pipeline.
 
@@ -28,20 +28,18 @@ Add this to your application.js after page is ready:
 
     $('.initialjs-avatar').initial();
 
-And finally, in your views, tag your *<img/>* class with `initialjs-avatar` class. You can use *data-attributes* as described in [initial.js](https://github.com/judesfernando/initial.js). Or you can use the helper below.
+And finally, in your views, tag your *<img/>* class with `initialjs-avatar` class. You can use *data-attributes* as described in [initial.js](https://github.com/mozilla/metrics-graphics). Or you can use the helper below.
 
 Enjoy.
 
 ## ActionView Helper
 
-For extra simplicity, you can use this helper in your view to generate your avatar image from your model. In the following examples we'll use User, but any model responding to `:full_name` will do. You can learn the options available and their defaults directly from the examples:
+For extra simplicity, you can use this helper in your view to generate your avatar image from your model. In the following examples we'll use User, but any model responding to `:name` will do. You can learn the options available and their defaults directly from the examples:
 
-    avatar_image(user.full_name)                              # => 100x100 image with round corners
-    avatar_image(user.full_name, size: 32)                    # => 32x32 image with round corners
-    avatar_image(user.full_name, class: 'extra_class')        # => add an extra CSS class to <img/> tag
-    avatar_image(user.full_name, round_corners: false)        # => disable round corners
-    avatar_image(user.full_name, count: 2)                    # => character count default is 1
-    avatar_image(user.full_name, color: (Black or '#000000')) # => Text Color default is #fff
+    avatar_image(user)                       # => 100x100 image with round corners
+    avatar_image(user, size: 32)             # => 32x32 image with round corners
+    avatar_image(user, class: 'extra_class') # => add an extra CSS class to <img/> tag
+    avatar_image(user, round_corners: false) # => disable round corners
 
 ## Development
 
