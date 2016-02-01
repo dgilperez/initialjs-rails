@@ -35,7 +35,7 @@ module InitialjsRails
     end
 
     def get_name(avatarable)
-      avatarable.is_a?(String) ? avatarable : avatarable.name
+      avatarable.is_a?(String) ? avatarable : avatarable.try(:name)
     end
   end
 end
