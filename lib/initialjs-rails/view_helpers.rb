@@ -11,7 +11,7 @@ module InitialjsRails
       txt_color     = options.fetch(:color)         { '#ffffff' }
 
       data_attributes = {
-        name:         get_name(avatarable, char_count),
+        name:         get_name_with_count(avatarable, char_count),
         seed:         seed,
         height:       size,
         width:        size,
@@ -22,17 +22,20 @@ module InitialjsRails
 
       data_attributes.merge!(radius: (size * 0.13).round) if round_corners
 
-      content_tag :img, nil, alt: avatarable, class: "initialjs-avatar #{klass}".strip, data: data_attributes
+      content_tag :img, nil, alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes
     end
 
-    protected
-
-    def get_name(name, count)
+    def get_name_with_count(avatarable, count)
+      name = get_name(avatarable)
       if count == 2
         "#{name.partition(" ").first[0]}#{name.partition(" ").last[0]}"
       else
         name
       end
+    end
+
+    def get_name(avatarable)
+      avatarable.is_a?(String) ? avatarable : avatarable.name
     end
   end
 end
