@@ -22,7 +22,7 @@ module InitialjsRails
 
       data_attributes.merge!(radius: (size * 0.13).round) if round_corners
 
-      content_tag :img, nil, alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes
+      tag(:img, {alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes}, true, false)
     end
 
     def get_name_with_count(avatarable, count)
