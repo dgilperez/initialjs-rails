@@ -9,6 +9,7 @@ module InitialjsRails
       seed          = options.fetch(:seed)          { 0 }
       char_count    = options.fetch(:count)         { 1 }
       txt_color     = options.fetch(:color)         { '#ffffff' }
+      initial_src   = options.fetch(:src)           { '' }
 
       data_attributes = {
         name:         get_name_with_count(avatarable, char_count),
@@ -22,7 +23,7 @@ module InitialjsRails
 
       data_attributes.merge!(radius: (size * 0.13).round) if round_corners
 
-      tag(:img, { alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes }, true, false)
+      tag(:img, { alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes, src: initial_src }, true, false)
     end
 
     def get_name_with_count(avatarable, count)
