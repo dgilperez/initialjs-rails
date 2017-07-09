@@ -5,104 +5,110 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     subject { HelperClass.new }
 
     it 'generates an image tag for a name string' do
-      expected_tag = default_avatar_image_result(name: 'Pancho')
-      expect(subject.avatar_image('Pancho')).to eq expected_tag
+      expected_tag = default_avatar_image_result(name: 'Ivan')
+      expect(subject.avatar_image('Ivan')).to eq expected_tag
     end
 
     it 'generates an image tag for a valid user' do
-      user = ValidUser.new('Rigoberta')
-      expected_tag = default_avatar_image_result(name: 'Rigoberta')
+      user = ValidUser.new('Fyodor')
+      expected_tag = default_avatar_image_result(name: 'Fyodor')
       expect(subject.avatar_image(user)).to eq expected_tag
     end
 
     it 'raises ArgumentError for an invalid user' do
-      user = InvalidUser.new('Rigoberta')
+      user = InvalidUser.new('Nicolai')
       expect do
         subject.avatar_image(user)
       end.to raise_error ArgumentError
     end
 
     it 'with a custom square size' do
-      expected_tag = "<img alt=\"Pablo\"
+      expected_tag = "<img alt=\"Alexander\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Pablo\"
+                      data-name=\"Alexander\"
                       data-seed=\"0\"
                       data-height=\"42\"
                       data-width=\"42\"
                       data-char-count=\"1\"
                       data-font-size=\"25\"
                       data-text-color=\"#ffffff\"
-                      data-radius=\"5\">"
-      expect(subject.avatar_image('Pablo', size: 42)).to eq expected_tag.squish
+                      data-radius=\"5\"
+                      src=\"\">"
+      expect(subject.avatar_image('Alexander', size: 42)).to eq expected_tag.squish
     end
 
     it 'without round_corners' do
-      expected_tag = "<img alt=\"Hulk Hogan\"
+      expected_tag = "<img alt=\"Anton\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Hulk Hogan\"
+                      data-name=\"Anton\"
                       data-seed=\"0\"
                       data-height=\"100\"
                       data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
-                      data-text-color=\"#ffffff\">"
-      expect(subject.avatar_image('Hulk Hogan', round_corners: false)).to eq expected_tag.squish
+                      data-text-color=\"#ffffff\"
+                      src=\"\">"
+      expect(subject.avatar_image('Anton', round_corners: false)).to eq expected_tag.squish
     end
 
     it 'with char count of 2' do
-      expected_tag = "<img alt=\"José Luis\"
+      expected_tag = "<img alt=\"Lev Nikolayevich\"
                       class=\"initialjs-avatar\"
-                      data-name=\"JL\"
+                      data-name=\"LN\"
                       data-seed=\"0\"
                       data-height=\"100\"
                       data-width=\"100\"
                       data-char-count=\"2\"
                       data-font-size=\"60\"
                       data-text-color=\"#ffffff\"
-                      data-radius=\"13\">"
-      expect(subject.avatar_image('José Luis', count: 2)).to eq expected_tag.squish
+                      data-radius=\"13\"
+                      src=\"\">"
+      expect(subject.avatar_image('Lev Nikolayevich', count: 2)).to eq expected_tag.squish
     end
 
     it 'with a fixed seed' do
-      expected_tag = "<img alt=\"Pablo\"
+      expected_tag = "<img alt=\"Mikhail\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Pablo\"
+                      data-name=\"Mikhail\"
                       data-seed=\"1337\"
                       data-height=\"100\"
                       data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
                       data-text-color=\"#ffffff\"
-                      data-radius=\"13\">"
-      expect(subject.avatar_image('Pablo', seed: 1337)).to eq expected_tag.squish
+                      data-radius=\"13\"
+                      src=\"\">"
+      expect(subject.avatar_image('Mikhail', seed: 1337)).to eq expected_tag.squish
     end
 
     it 'with an extra class' do
-      expected_tag = "<img alt=\"Pablo\"
+      expected_tag = "<img alt=\"Vladimir\"
                       class=\"initialjs-avatar my-funky-class\"
-                      data-name=\"Pablo\"
+                      data-name=\"Vladimir\"
                       data-seed=\"0\"
                       data-height=\"100\"
                       data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
                       data-text-color=\"#ffffff\"
-                      data-radius=\"13\">"
-      expect(subject.avatar_image('Pablo', class: 'my-funky-class')).to eq expected_tag.squish
+                      data-radius=\"13\"
+                      src=\"\">"
+      expect(subject.avatar_image('Vladimir', class: 'my-funky-class')).to eq expected_tag.squish
     end
 
     it 'with a custom color' do
-      expected_tag = "<img alt=\"Pablo\"
+      expected_tag = "<img alt=\"Aleksandr\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Pablo\"
+                      data-name=\"Aleksandr\"
                       data-seed=\"0\"
                       data-height=\"100\"
                       data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
                       data-text-color=\"#BADA55\"
-                      data-radius=\"13\">"
-      expect(subject.avatar_image('Pablo', color: '#BADA55')).to eq expected_tag.squish
+                      data-radius=\"13\"
+                      src=\"\">"
+      expect(subject.avatar_image('Aleksandr', color: '#BADA55')).to eq expected_tag.squish
     end
 
     def default_avatar_image_result(args = {})
@@ -117,7 +123,8 @@ describe InitialjsRails::ViewHelpers, type: :helper do
             data-char-count=\"1\"
             data-font-size=\"60\"
             data-text-color=\"#ffffff\"
-            data-radius=\"13\">"
+            data-radius=\"13\"
+            src=\"\">"
       tag.squish
     end
   end

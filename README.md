@@ -42,6 +42,7 @@ For extra simplicity, you can use this helper in your view to generate your avat
     avatar_image(user, round_corners: false) # => disable round corners
     avatar_image(user, count: 2)             # => Number of characters shown in the image
     avatar_image(user, color: 'black')       # => Text color black. You can also provide any color in hex format: #000
+    avatar_image(user, src: some_path)       # => Adds src of alternative image for browser does not support SVG
 
 ## Development
 
