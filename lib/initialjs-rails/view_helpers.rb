@@ -16,13 +16,13 @@ module InitialjsRails
         height:       size,
         width:        size,
         'char-count': char_count,
-        'font-size':  (size * 0.6),
+        'font-size':  (size * 0.6).round,
         'text-color': txt_color
       }
 
       data_attributes.merge!(radius: (size * 0.13).round) if round_corners
 
-      tag(:img, {alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes}, true, false)
+      tag(:img, { alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes }, true, false)
     end
 
     def get_name_with_count(avatarable, count)
@@ -35,7 +35,13 @@ module InitialjsRails
     end
 
     def get_name(avatarable)
-      avatarable.is_a?(String) ? avatarable : avatarable.try(:name)
+      if avatarable.is_a?(String)
+        avatarable
+      elsif avatarable.respond_to?(:name)
+        avatarable.name
+      else
+        raise ArgumentError, '#avatar_image argument must be a String or respond to :name'
+      end
     end
   end
 end
