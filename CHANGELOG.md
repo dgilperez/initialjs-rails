@@ -1,3 +1,7 @@
+## master
+
+* Adds Appraisal and rspec and a few specs.
+
 ## 0.2.0.3
 
 * Updates initial.js to master - Adds unicode support ~ @kikito
