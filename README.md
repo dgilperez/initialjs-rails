@@ -1,4 +1,4 @@
-# initialjs-rails
+# initialjs-rails [![Build Status](https://travis-ci.org/dgilperez/initialjs-rails.svg?branch=master)](https://travis-ci.org/dgilperez/initialjs-rails)
 
 [initial.js](https://github.com/judesfernando/initial.js) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
 
