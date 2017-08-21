@@ -9,7 +9,7 @@ module InitialjsRails
       seed          = options.fetch(:seed)          { 0 }
       char_count    = options.fetch(:count)         { 1 }
       txt_color     = options.fetch(:color)         { '#ffffff' }
-      initial_src   = options.fetch(:src)           { '' }
+      initial_src   = options.fetch(:src)           { '/images/initialjs-blank.png' }
 
       data_attributes = {
         name:         get_name_with_count(avatarable, char_count),
