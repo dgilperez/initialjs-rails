@@ -1,3 +1,7 @@
+## 0.2.0.6
+
+* Updates initial.js to master - Adds background_color option. ~ @atd
+
 ## 0.2.0.5
 
 * Adds src option to prevent HTML validation error on browsers not supporting SVG. ~ @decabeza

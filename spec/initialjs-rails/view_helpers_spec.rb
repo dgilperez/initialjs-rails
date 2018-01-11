@@ -25,14 +25,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with a custom square size' do
       expected_tag = "<img alt=\"Alexander\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Alexander\"
-                      data-seed=\"0\"
-                      data-height=\"42\"
-                      data-width=\"42\"
                       data-char-count=\"1\"
                       data-font-size=\"25\"
-                      data-text-color=\"#ffffff\"
+                      data-height=\"42\"
+                      data-name=\"Alexander\"
                       data-radius=\"5\"
+                      data-seed=\"0\"
+                      data-text-color=\"#ffffff\"
+                      data-width=\"42\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Alexander', size: 42)).to eq expected_tag.squish
     end
@@ -40,13 +40,13 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'without round_corners' do
       expected_tag = "<img alt=\"Anton\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Anton\"
-                      data-seed=\"0\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
+                      data-height=\"100\"
+                      data-name=\"Anton\"
+                      data-seed=\"0\"
                       data-text-color=\"#ffffff\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Anton', round_corners: false)).to eq expected_tag.squish
     end
@@ -54,14 +54,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with char count of 2' do
       expected_tag = "<img alt=\"Lev Nikolayevich\"
                       class=\"initialjs-avatar\"
-                      data-name=\"LN\"
-                      data-seed=\"0\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"2\"
                       data-font-size=\"60\"
-                      data-text-color=\"#ffffff\"
+                      data-height=\"100\"
+                      data-name=\"LN\"
                       data-radius=\"13\"
+                      data-seed=\"0\"
+                      data-text-color=\"#ffffff\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Lev Nikolayevich', count: 2)).to eq expected_tag.squish
     end
@@ -69,14 +69,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with a fixed seed' do
       expected_tag = "<img alt=\"Mikhail\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Mikhail\"
-                      data-seed=\"1337\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
-                      data-text-color=\"#ffffff\"
+                      data-height=\"100\"
+                      data-name=\"Mikhail\"
                       data-radius=\"13\"
+                      data-seed=\"1337\"
+                      data-text-color=\"#ffffff\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Mikhail', seed: 1337)).to eq expected_tag.squish
     end
@@ -84,14 +84,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with an extra class' do
       expected_tag = "<img alt=\"Vladimir\"
                       class=\"initialjs-avatar my-funky-class\"
-                      data-name=\"Vladimir\"
-                      data-seed=\"0\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
-                      data-text-color=\"#ffffff\"
+                      data-height=\"100\"
+                      data-name=\"Vladimir\"
                       data-radius=\"13\"
+                      data-seed=\"0\"
+                      data-text-color=\"#ffffff\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Vladimir', class: 'my-funky-class')).to eq expected_tag.squish
     end
@@ -99,14 +99,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with a custom color' do
       expected_tag = "<img alt=\"Aleksandr\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Aleksandr\"
-                      data-seed=\"0\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"1\"
                       data-font-size=\"60\"
-                      data-text-color=\"#BADA55\"
+                      data-height=\"100\"
+                      data-name=\"Aleksandr\"
                       data-radius=\"13\"
+                      data-seed=\"0\"
+                      data-text-color=\"#BADA55\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Aleksandr', color: '#BADA55')).to eq expected_tag.squish
     end
@@ -114,15 +114,15 @@ describe InitialjsRails::ViewHelpers, type: :helper do
     it 'with a custom background color' do
       expected_tag = "<img alt=\"Aleksandr\"
                       class=\"initialjs-avatar\"
-                      data-name=\"Aleksandr\"
-                      data-seed=\"0\"
-                      data-height=\"100\"
-                      data-width=\"100\"
                       data-char-count=\"1\"
-                      data-font-size=\"60\"
-                      data-text-color=\"#ffffff\"
                       data-color=\"#BADA55\"
+                      data-font-size=\"60\"
+                      data-height=\"100\"
+                      data-name=\"Aleksandr\"
                       data-radius=\"13\"
+                      data-seed=\"0\"
+                      data-text-color=\"#ffffff\"
+                      data-width=\"100\"
                       src=\"/images/initialjs-blank.png\">"
       expect(subject.avatar_image('Aleksandr', background_color: '#BADA55')).to eq expected_tag.squish
     end
@@ -132,14 +132,14 @@ describe InitialjsRails::ViewHelpers, type: :helper do
 
       tag = "<img alt=\"#{name}\"
             class=\"initialjs-avatar\"
-            data-name=\"#{name}\"
-            data-seed=\"0\"
-            data-height=\"100\"
-            data-width=\"100\"
             data-char-count=\"1\"
             data-font-size=\"60\"
-            data-text-color=\"#ffffff\"
+            data-height=\"100\"
+            data-name=\"#{name}\"
             data-radius=\"13\"
+            data-seed=\"0\"
+            data-text-color=\"#ffffff\"
+            data-width=\"100\"
             src=\"/images/initialjs-blank.png\">"
       tag.squish
     end
