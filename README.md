@@ -36,13 +36,14 @@ Enjoy.
 
 For extra simplicity, you can use this helper in your view to generate your avatar image from your model. In the following examples we'll use User, but any model responding to `:name` will do. You can also provide a `String` directly. You can learn the options available and their defaults directly from the examples:
 
-    avatar_image(user)                       # => 100x100 image with round corners
-    avatar_image(user, size: 32)             # => 32x32 image with round corners
-    avatar_image(user, class: 'extra_class') # => add an extra CSS class to <img/> tag
-    avatar_image(user, round_corners: false) # => disable round corners
-    avatar_image(user, count: 2)             # => Number of characters shown in the image
-    avatar_image(user, color: 'black')       # => Text color black. You can also provide any color in hex format: #000
-    avatar_image(user, src: some_path)       # => Adds src of alternative image for browser does not support SVG
+    avatar_image(user)                            # => 100x100 image with round corners
+    avatar_image(user, size: 32)                  # => 32x32 image with round corners
+    avatar_image(user, class: 'extra_class')      # => add an extra CSS class to <img/> tag
+    avatar_image(user, round_corners: false)      # => disable round corners
+    avatar_image(user, count: 2)                  # => Number of characters shown in the image
+    avatar_image(user, color: 'black')            # => Text color black. You can also provide any color in hex format: #000
+    avatar_image(user, background_color: 'white') # => Background color white. You can also provide any color in hex format: #FFF
+    avatar_image(user, src: some_path)            # => Adds src of alternative image for browser does not support SVG
 
 ## Development
 

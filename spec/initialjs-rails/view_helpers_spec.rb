@@ -111,6 +111,22 @@ describe InitialjsRails::ViewHelpers, type: :helper do
       expect(subject.avatar_image('Aleksandr', color: '#BADA55')).to eq expected_tag.squish
     end
 
+    it 'with a custom background color' do
+      expected_tag = "<img alt=\"Aleksandr\"
+                      class=\"initialjs-avatar\"
+                      data-name=\"Aleksandr\"
+                      data-seed=\"0\"
+                      data-height=\"100\"
+                      data-width=\"100\"
+                      data-char-count=\"1\"
+                      data-font-size=\"60\"
+                      data-text-color=\"#ffffff\"
+                      data-color=\"#BADA55\"
+                      data-radius=\"13\"
+                      src=\"/images/initialjs-blank.png\">"
+      expect(subject.avatar_image('Aleksandr', background_color: '#BADA55')).to eq expected_tag.squish
+    end
+
     def default_avatar_image_result(args = {})
       name = args.fetch(:name)
 
