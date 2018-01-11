@@ -17,9 +17,9 @@ module InitialjsRails
         seed:         seed,
         height:       size,
         width:        size,
-        'char-count': char_count,
-        'font-size':  (size * 0.6).round,
-        'text-color': txt_color,
+        'char-count' => char_count,
+        'font-size'  => (size * 0.6).round,
+        'text-color' => txt_color,
         color:        bg_color
       }
 
