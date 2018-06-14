@@ -33,7 +33,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#ffffff\"
                       data-width=\"42\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Alexander', size: 42)).to eq expected_tag.squish
     end
 
@@ -47,7 +47,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#ffffff\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Anton', round_corners: false)).to eq expected_tag.squish
     end
 
@@ -62,7 +62,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#ffffff\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Lev Nikolayevich', count: 2)).to eq expected_tag.squish
     end
 
@@ -77,7 +77,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"1337\"
                       data-text-color=\"#ffffff\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Mikhail', seed: 1337)).to eq expected_tag.squish
     end
 
@@ -92,7 +92,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#ffffff\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Vladimir', class: 'my-funky-class')).to eq expected_tag.squish
     end
 
@@ -107,7 +107,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#BADA55\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Aleksandr', color: '#BADA55')).to eq expected_tag.squish
     end
 
@@ -123,7 +123,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
                       data-seed=\"0\"
                       data-text-color=\"#ffffff\"
                       data-width=\"100\"
-                      src=\"/assets/images/initialjs-blank.png\">"
+                      src=\"/assets/initialjs-blank.png\">"
       expect(subject.avatar_image('Aleksandr', background_color: '#BADA55')).to eq expected_tag.squish
     end
 
@@ -140,7 +140,7 @@ describe InitialjsRails::ViewHelpers, type: :helper do
             data-seed=\"0\"
             data-text-color=\"#ffffff\"
             data-width=\"100\"
-            src=\"/assets/images/initialjs-blank.png\">"
+            src=\"/assets/initialjs-blank.png\">"
       tag.squish
     end
   end
