@@ -1,3 +1,7 @@
+## 0.2.0.8
+
+- Drops Rails 3.2 / Ruby 2.0 support ~ @dgilperez
+
 ## 0.2.0.7
 
 * `name` and `alt` can be passed as attributes to the helper ~ @dgilperez
