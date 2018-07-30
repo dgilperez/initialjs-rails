@@ -10,7 +10,7 @@ module InitialjsRails
       char_count    = options.fetch(:count)            { 1 }
       txt_color     = options.fetch(:color)            { '#ffffff' }
       bg_color      = options.fetch(:background_color) { nil }
-      initial_src   = options.fetch(:src)              { '/images/initialjs-blank.png' }
+      initial_src   = options.fetch(:src)              { '/assets/initialjs-blank.png' }
       radius        = (size * 0.13).round if round_corners
       font_size     = (size * 0.6).round
 
