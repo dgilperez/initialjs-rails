@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    initialjs-rails (0.2.0.6)
+    initialjs-rails (0.2.0.7)
       railties (>= 3.1, < 6.0)
 
 GEM
