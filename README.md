@@ -2,7 +2,7 @@
 
 [initial.js](https://github.com/judesfernando/initial.js) is a simple jQuery plugin to make Gmail-like text avatars for profile pictures using SVG.
 
-**initialjs-rails** is a wrapper to easily include it in your Rails projects using the assets pipeline.
+**initialjs-rails** is a wrapper to easily include it in your Rails projects using the assets pipeline. Since 0.2.0.8, minimun requirements are Ruby 2.1+ and Rails 4.2+. Previous versions may work, but are not tested and will not be supported.
 
 ## Installation
 

@@ -1,6 +1,6 @@
 ## 0.2.0.8
 
-- Drops Rails 3.2 / Ruby 2.0 support ~ @dgilperez
+- Drops Rails 3.2 / Ruby 1.9.3 / 2.0 support ~ @dgilperez
 
 ## 0.2.0.7
 

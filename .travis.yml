@@ -7,7 +7,6 @@ cache: bundler
 script: "bundle exec rake"
 
 rvm:
-  - 1.9.3
   - 2.2.4
   - 2.3.0
   - 2.4.0
@@ -21,10 +20,3 @@ gemfile:
 
 matrix:
   fast_finish: true
-  exclude:
-  - rvm: 1.9.3
-    gemfile: gemfiles/rails_5.0.gemfile
-  - rvm: 1.9.3
-    gemfile: gemfiles/rails_5.1.gemfile
-  - rvm: 1.9.3
-    gemfile: gemfiles/rails_5.2.gemfile
