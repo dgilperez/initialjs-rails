@@ -1,3 +1,8 @@
+## 0.2.0.7
+
+* Name and alt can be passed as attributes to the helper ~ @dgilperez
+* Fix issues with initialjs-blank.png not found @shah743 and @PierreMesure
+
 ## 0.2.0.6
 
 * Updates initial.js to master - Adds background_color option. ~ @atd

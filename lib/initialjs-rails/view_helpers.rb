@@ -3,14 +3,16 @@ require 'json'
 module InitialjsRails
   module ViewHelpers
     def avatar_image(avatarable, options = {})
-      size          = options.fetch(:size)             { 100 }
-      klass         = options.fetch(:class)            { '' }
-      round_corners = options.fetch(:round_corners)    { true }
-      seed          = options.fetch(:seed)             { 0 }
-      char_count    = options.fetch(:count)            { 1 }
-      txt_color     = options.fetch(:color)            { '#ffffff' }
-      bg_color      = options.fetch(:background_color) { nil }
-      initial_src   = options.fetch(:src)              { '/assets/initialjs-blank.png' }
+      size          = options.fetch(:size, 100)
+      klass         = options.fetch(:class, '')
+      round_corners = options.fetch(:round_corners, true)
+      seed          = options.fetch(:seed, 0)
+      char_count    = options.fetch(:count, 1)
+      txt_color     = options.fetch(:color, '#ffffff')
+      bg_color      = options.fetch(:background_color, nil)
+      initial_src   = options.fetch(:src, '/assets/initialjs-blank.png')
+      name          = options.fetch(:name, get_name_with_count(avatarable, char_count))
+      alt           = options.fetch(:alt, get_name(avatarable))
       radius        = (size * 0.13).round if round_corners
       font_size     = (size * 0.6).round
 
@@ -19,15 +21,17 @@ module InitialjsRails
         color: bg_color,
         'font-size' => font_size,
         height: size,
-        name: get_name_with_count(avatarable, char_count),
+        name: name,
         radius: radius,
         seed: seed,
         'text-color' => txt_color,
         width: size
       }.reject { |_, v| v.blank? }
 
-      tag(:img, { alt: get_name(avatarable), class: "initialjs-avatar #{klass}".strip, data: data_attributes, src: initial_src }, true, false)
+      tag(:img, { alt: alt, class: "initialjs-avatar #{klass}".strip, data: data_attributes, src: initial_src }, true, false)
     end
+
+    private
 
     def get_name_with_count(avatarable, count)
       name = get_name(avatarable)
