@@ -1,5 +1,6 @@
 appraise "rails-3.2" do
   gem 'activemodel', '~> 3.2.0'
+  gem 'nokogiri', '< 1.8.1'
 end
 
 appraise "rails-4.2" do
@@ -12,4 +13,8 @@ end
 
 appraise "rails-5.1" do
   gem "activemodel", '~> 5.1.0'
+end
+
+appraise "rails-5.2" do
+  gem "activemodel", '~> 5.2.0'
 end

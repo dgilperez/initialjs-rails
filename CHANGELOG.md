@@ -1,7 +1,9 @@
 ## 0.2.0.7
 
-* Name and alt can be passed as attributes to the helper ~ @dgilperez
+* `name` and `alt` can be passed as attributes to the helper ~ @dgilperez
+* (Potentially breaking) `get_name_with_count` and `get_name` are private now ~ @dgilperez
 * Fix issues with initialjs-blank.png not found @shah743 and @PierreMesure
+* Adds Rails 5.2 / Ruby 2.4/2.5 to Appraisal, drops some older Ruby versions ~ @dgilperez
 
 ## 0.2.0.6
 
