@@ -2,6 +2,7 @@
 
 - Relax Rails dependency to allow Rails 6 ~ @JunichiIto
 - Don't Ruby < 2.4, do test Rails 6 and edge ~ @dgilperez
+- Bumps rake version to protect against CVE-2020-8130 ~ @dgilperez
 
 ## 0.2.0.8
 
