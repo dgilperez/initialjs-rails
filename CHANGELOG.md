@@ -1,3 +1,8 @@
+## 0.2.0.9
+
+- Relax Rails dependency to allow Rails 6 ~ @JunichiIto
+- Don't Ruby < 2.4, do test Rails 6 and edge ~ @dgilperez
+
 ## 0.2.0.8
 
 - Drops Rails 3.2 / Ruby 1.9.3 / 2.0 support ~ @dgilperez
